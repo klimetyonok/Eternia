@@ -17,6 +17,39 @@
 }
 
 @font-face {
+    font-family: 'Segoe';
+    font-style: normal;
+    font-display: swap;
+    src: local(Arial);
+    src: url(../fonts/SegoeUI.eot) format('eot'), url(../fonts/SegoeUI.otf) format('otf'), url(../fonts/SegoeUI.svg) format('svg'), url(../fonts/SegoeUI.ttf) format('ttf') url(../fonts/SegoeUI.woff) format('woff');
+}
+
+@font-face {
+    font-family: 'SegoeL';
+    font-style: normal;
+    font-display: swap;
+    src: local(Arial);
+    src: url(../fonts/SegoeUI-Light.eot) format('eot'), url(../fonts/SegoeUI-Light.otf) format('otf'), url(../fonts/SegoeUI-Light.svg) format('svg'), url(../fonts/SegoeUI-Light.ttf) format('ttf') url(../fonts/SegoeUI-Light.woff) format('woff');
+}
+
+@font-face {
+    font-family: 'SegoeSL';
+    font-style: normal;
+    font-display: swap;
+    src: local(Arial);
+    src: url(../fonts/SegoeUI-Semilight.eot) format('eot'), url(../fonts/SegoeUI-Semilight.otf) format('otf'), url(../fonts/SegoeUI-Semilight.svg) format('svg'), url(../fonts/SegoeUI-Semilight.ttf) format('ttf') url(../fonts/SegoeUI-Semilight.woff) format('woff');
+}
+
+@font-face {
+    font-family: 'SegoeB';
+    font-style: normal;
+    font-display: swap;
+    font-weight: bold;
+    src: local(Arial);
+    src: url(../fonts/SegoeUI-Bold.eot) format('eot'), url(../fonts/SegoeUI-Bold.otf) format('otf'), url(../fonts/SegoeUI-Bold.svg) format('svg'), url(../fonts/SegoeUI-Bold.ttf) format('ttf') url(../fonts/SegoeUI-Bold.woff) format('woff');
+}
+
+@font-face {
     font-family: 'SSPExtraLight';
     font-style: normal;
     font-weight: 300;

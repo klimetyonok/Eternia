@@ -1,10 +1,10 @@
-.container {
-    max-width: 1700px;
-    margin: 0 auto;
-}
+@import url(./settings.scss);
+
+/*set wr-header*/
 
 header {
     .container {
+        max-width: 1720px;
         height: 160px;
         display: flex;
         justify-content: center;
@@ -44,24 +44,24 @@ header {
                     background-color: #000;
                 }
                 span:nth-of-type(1) {
-                    top: -3px;
+                    top: 11px;
                 }
                 span:nth-of-type(2) {
-                    top: 22px;
+                    top: 17px;
                 }
                 span:nth-of-type(3) {
-                    bottom: 2px;
+                    top: 25px;
                 }
             }
             .first {
-                transform: translate(7px, -4px) rotate(45deg);
+                transform: translate(4px, -8px) rotate(45deg);
                 transform-origin: left top;
             }
             .middle {
                 transform: scale(0);
             }
             .last {
-                transform: translate(-3px, -17px) rotate(-45deg);
+                transform: translate(-8px, -24px) rotate(-45deg);
                 transform-origin: right bottom;
             }
         }
@@ -69,11 +69,14 @@ header {
 }
 
 nav {
-    background-color: #e9edef;
     .container {
+        max-width: 1720px;
+        width: 100%;
         height: 750px;
+        background-color: #e9edef;
         position: absolute;
         visibility: hidden;
+        z-index: 10;
         .menu-list {
             display: flex;
             list-style: none;
@@ -189,6 +192,110 @@ nav {
                         content: '';
                     }
                 }
+            }
+        }
+    }
+}
+
+
+/*set wr-slides*/
+
+.wr-slides {
+    .container {
+        max-width: 1720px;
+        height: 1040px;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        .slider {
+            width: 1600px;
+            height: 850px;
+            .slick-next,
+            .slick-prev {
+                height: 59px;
+                width: 59px;
+                background: #7f7f7f;
+                z-index: 2;
+            }
+        }
+        .scroll {
+            width: 134px;
+            height: 190px;
+            padding: 52px 794px 122px 797px;
+            position: relative;
+            a {
+                text-decoration: none;
+                text-transform: capitalize;
+                &::after {
+                    content: '\2193';
+                    position: absolute;
+                    width: 12px;
+                    height: 24px;
+                    top: 50px;
+                    right: 805px;
+                    color: #a5a5a5;
+                }
+            }
+        }
+    }
+    .slider-text {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 200px;
+        right: 940px;
+        p::before {
+            content: '';
+            position: absolute;
+            width: 40px;
+            height: 4px;
+            top: -10px;
+            right: 390px;
+            background-color: #000;
+        }
+        & p:nth-child(1),
+        & p:nth-child(3) {
+            font-family: 'Segoe';
+            font-size: 60px;
+            font-weight: 300;
+            text-align: left;
+            color: #626262;
+            margin-bottom: 5px;
+            margin-top: 0;
+        }
+        & p:nth-child(2) {
+            font-family: 'SegoeB';
+            font-size: 100px;
+            text-align: left;
+            text-transform: uppercase;
+            color: #000001;
+            margin-bottom: 0;
+            margin-top: 0;
+        }
+        .btn {
+            width: 220px;
+            height: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 2px;
+            border: solid 2px #000000;
+            cursor: pointer;
+            margin-top: 55px;
+            a {
+                font-family: 'MBold';
+                font-size: 13px;
+                font-weight: bold;
+                font-stretch: normal;
+                font-style: normal;
+                line-height: normal;
+                letter-spacing: 2.6px;
+                text-align: center;
+                color: #e06f0a;
+                text-decoration: none;
+                text-transform: uppercase;
             }
         }
     }

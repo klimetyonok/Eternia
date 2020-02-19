@@ -12,10 +12,13 @@ const imagemin = require('gulp-imagemin');
 const css = [
     './src/scss/main.scss',
     './src/scss/settings.scss',
-    './src/scss/_fonts.scss'
+    './src/scss/_fonts.scss',
+    './src/scss/slick.scss',
+    './src/scss/slick-theme.scss'
 ]
 const js = [
-    './src/js/lib.js',
+    './src/js/jquery.min.js',
+    './src/js/slick.min.js',
     './src/js/main.js'
 ]
 
