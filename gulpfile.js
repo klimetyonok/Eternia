@@ -14,7 +14,8 @@ const css = [
     './src/scss/settings.scss',
     './src/scss/_fonts.scss',
     './src/scss/slick.scss',
-    './src/scss/slick-theme.scss'
+    './src/scss/slick-theme.scss',
+    './src/css/reset.css',
 ]
 const js = [
     './src/js/jquery.min.js',
@@ -68,6 +69,7 @@ gulp.task('watch', () => {
     });
 
     gulp.watch('./src/scss/**/*.scss', gulp.series('styles'))
+    gulp.watch('./src/css/**/*.css', gulp.series('styles'))
     gulp.watch('./src/js/**/*.js', gulp.series('scripts'))
     gulp.watch('./src/media/**', gulp.series('compress'))
     gulp.watch('./*.html').on('change', browserSync.reload);

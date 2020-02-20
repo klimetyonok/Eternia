@@ -11,6 +11,10 @@
       $('.burger span:nth-child(3)').toggleClass('last');
   });
 
-  $('.slider').slick({
+  $('.slides-slider').slick({
+      arrows: true,
+  });
+
+  $('.about-slider').slick({
       arrows: true,
   });
