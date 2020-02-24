@@ -8,6 +8,11 @@ const browserSync = require('browser-sync').create();
 const sourcemaps = require('gulp-sourcemaps');
 const sass = require('gulp-sass');
 const imagemin = require('gulp-imagemin');
+const validator = require('gulp-html');
+
+const html = [
+    './src/index.html'
+]
 
 const css = [
     './src/scss/main.scss',
@@ -15,13 +20,19 @@ const css = [
     './src/scss/_fonts.scss',
     './src/scss/slick.scss',
     './src/scss/slick-theme.scss',
-    './src/css/reset.css',
+    './src/css/reset.css'
 ]
 const js = [
     './src/js/jquery.min.js',
     './src/js/slick.min.js',
     './src/js/main.js'
 ]
+
+gulp.task('html', () => {
+    return gulp.src(html)
+        .pipe(validator())
+        .pipe(gulp.dest('build/'));
+});
 
 gulp.task('styles', () => {
     return gulp.src(css)
@@ -75,4 +86,4 @@ gulp.task('watch', () => {
     gulp.watch('./*.html').on('change', browserSync.reload);
 });
 
-gulp.task('default', gulp.series('del', gulp.parallel('styles', 'scripts', 'compress'), 'watch'));
+gulp.task('default', gulp.series('del', gulp.parallel('html', 'styles', 'scripts', 'compress'), 'watch'));

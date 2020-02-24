@@ -1,412 +1,563 @@
-@import url(./settings.scss);
-.container {
-    max-width: 1720px;
-    margin: 0 auto;
-}
-
-%menu-list-slash {
-    position: absolute;
-    content: '';
-    width: 35px;
-    height: 1px;
-    top: 29px;
-    left: 215px;
-}
-
-
-/*set wr-header*/
-
-header {
-    .container {
-        height: 160px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        position: relative;
-        .header-logo {
-            width: 172px;
-            height: 69px;
-        }
-        .burger {
-            width: 125px;
-            height: 55px;
-            position: absolute;
-            right: 25px;
-            cursor: pointer;
-            .burger-text {
-                font-family: 'MBold';
-                text-transform: uppercase;
-                font-size: 13px;
-                letter-spacing: 2.6px;
-                color: #c4c4c4;
-            }
-            .burger-img {
-                display: inline-block;
-                transition: all .4s;
-                box-sizing: border-box;
-                position: relative;
-                width: 40px;
-                height: 23px;
-                span {
-                    display: inline-block;
-                    transition: all .4s;
-                    box-sizing: border-box;
-                    position: absolute;
-                    width: 100%;
-                    height: 3px;
-                    background-color: #000;
-                }
-                span:nth-of-type(1) {
-                    top: 11px;
-                }
-                span:nth-of-type(2) {
-                    top: 17px;
-                }
-                span:nth-of-type(3) {
-                    top: 25px;
-                }
-            }
-            .first {
-                transform: translate(4px, -8px) rotate(45deg);
-                transform-origin: left top;
-            }
-            .middle {
-                transform: scale(0);
-            }
-            .last {
-                transform: translate(-8px, -24px) rotate(-45deg);
-                transform-origin: right bottom;
-            }
-        }
-    }
-}
-
-nav {
-    .container {
-        height: 750px;
-        background-color: #e9edef;
-        position: absolute;
-        visibility: hidden;
-        z-index: 10;
-        .menu-list {
-            display: flex;
-            list-style: none;
-            flex-direction: column;
-            height: 100%;
-            justify-content: center;
-            margin-left: 20%;
-            position: relative;
-            >:nth-child(2):after {
-                @extend %menu-list-slash;
-            }
-            >:nth-child(3):after {
-                @extend %menu-list-slash;
-            }
-            li {
-                padding: 15px 0px 15px 0;
-                position: relative;
-                display: flex;
-                align-items: center;
-                a {
-                    text-decoration: none;
-                    color: #000000;
-                    font-family: 'MBold';
-                    font-size: 30px;
-                    text-transform: uppercase;
-                    letter-spacing: 3px;
-                }
-                a:hover {
-                    color: #e06f0a;
-                }
-                .menu-list-about {
-                    list-style: none;
-                    display: flex;
-                    justify-content: space-between;
-                    li {
-                        display: inline-block;
-                        padding: 0 20px;
-                        a {
-                            height: 12px;
-                            color: #626262;
-                            font-family: 'MReg';
-                            font-size: 14px;
-                            text-transform: uppercase;
-                            letter-spacing: 2.8px;
-                        }
-                        a:hover {
-                            color: #e06f0a;
-                            letter-spacing: 2.8px;
-                        }
-                    }
-                    >::after {
-                        content: '\002f';
-                        position: absolute;
-                        right: -5px;
-                        color: #626262;
-                        font-family: 'MReg';
-                        font-size: 14px;
-                        font-weight: 700;
-                        text-transform: uppercase;
-                        letter-spacing: 2.8px;
-                    }
-                    >:nth-child(3):after {
-                        content: '';
-                    }
-                }
-                .menu-list-services {
-                    list-style: none;
-                    display: flex;
-                    justify-content: space-between;
-                    margin-left: 115px;
-                    li {
-                        padding: 0 20px;
-                        a {
-                            display: block;
-                            height: 12px;
-                            color: #626262;
-                            font-family: 'MReg';
-                            font-size: 14px;
-                            font-weight: semibold;
-                            text-transform: uppercase;
-                            letter-spacing: 2.8px;
-                        }
-                        a:hover {
-                            color: #e06f0a;
-                            letter-spacing: 2.8px;
-                        }
-                    }
-                    >::after {
-                        content: '\002f';
-                        position: absolute;
-                        right: -5px;
-                        color: #626262;
-                        font-family: 'MReg';
-                        font-size: 14px;
-                        font-weight: 700;
-                        text-transform: uppercase;
-                        letter-spacing: 2.8px;
-                    }
-                    >:nth-child(4):after {
-                        content: '';
-                    }
-                }
-            }
-        }
-    }
-}
-
-
-/*set wr-slides*/
-
-.wr-slides {
-    .container {
-        height: 1040px;
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        .slides-slider {
-            max-width: 1600px;
-            height: 850px;
-            .slick-next,
-            .slick-prev {
-                height: 59px;
-                width: 59px;
-                background: #7f7f7f;
-                z-index: 2;
-            }
-        }
-        .scroll {
-            width: 134px;
-            height: 190px;
-            padding: 52px 794px 122px 797px;
-            position: relative;
-            a {
-                text-decoration: none;
-                text-transform: capitalize;
-                &::after {
-                    content: '\2193';
-                    position: absolute;
-                    width: 12px;
-                    height: 24px;
-                    top: 50px;
-                    right: 805px;
-                    color: #a5a5a5;
-                }
-            }
-        }
-    }
-    .slider-text {
-        display: flex;
-        flex-direction: column;
-        position: absolute;
-        top: 200px;
-        right: 940px;
-        p::before {
-            content: '';
-            position: absolute;
-            width: 40px;
-            height: 4px;
-            top: -10px;
-            right: 390px;
-            background-color: #000;
-        }
-        & p:nth-child(1),
-        & p:nth-child(3) {
-            font-family: 'Segoe';
-            font-size: 60px;
-            font-weight: 300;
-            text-align: left;
-            color: #626262;
-            margin-bottom: 5px;
-            margin-top: 0;
-        }
-        & p:nth-child(2) {
-            font-family: 'SegoeB';
-            font-size: 100px;
-            text-align: left;
-            text-transform: uppercase;
-            color: #000001;
-            margin-bottom: 0;
-            margin-top: 0;
-        }
-        .btn {
-            width: 220px;
-            height: 60px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            border-radius: 2px;
-            border: solid 2px #000000;
-            cursor: pointer;
-            margin-top: 55px;
-            a {
-                font-family: 'MBold';
-                font-size: 13px;
-                font-weight: bold;
-                font-stretch: normal;
-                font-style: normal;
-                line-height: normal;
-                letter-spacing: 2.6px;
-                text-align: center;
-                color: #e06f0a;
-                text-decoration: none;
-                text-transform: uppercase;
-            }
-        }
-    }
-}
-
-
-/*set wr-about*/
-
-.wr-about {
-    background-color: #e9edef;
-    .container {
-        height: 760px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        .wr-about-bg {
-            width: 1240px;
-            height: 530px;
-            box-shadow: 0px 10px 100px 0 rgba(49, 49, 49, 0.2);
-            background-color: #ffffff;
-            display: flex;
-            position: relative;
-            .about-text {
-                max-width: 595px;
-                flex: 1 0 50%;
-                display: flex;
-                flex-direction: column;
-                position: absolute;
-                top: -3%;
-                right: 55%;
-                padding: 0px 75px 60px 55px;
-                h2 {
-                    transform: rotate(180deg);
-                    writing-mode: tb-rl;
-                    position: absolute;
-                    right: 740px;
-                    top: 140px;
-                }
-                h3 {
-                    width: 401px;
-                    height: 23px;
-                    font-family: 'MBold';
-                    font-weight: bold;
-                    font-size: 30px;
-                    text-align: left;
-                    color: #000000;
-                    text-transform: uppercase;
-                    margin-bottom: 103px;
-                    position: relative;
-                    &::after {
-                        position: absolute;
-                        content: '';
-                        background-color: #000;
-                        width: 40px;
-                        height: 4px;
-                        top: 250%;
-                        right: 90%;
-                    }
-                }
-                &:first-of-type p {
-                    margin-bottom: 50px;
-                }
-                &:last-of-type p {
-                    margin-bottom: 90px;
-                }
-                .about-more {
-                    width: 140px;
-                    height: 40px;
-                    a {
-                        text-decoration: none;
-                        font-family: 'MBold';
-                        font-size: 13px;
-                        letter-spacing: 2.6px;
-                        text-align: left;
-                        color: #e06f0a;
-                        text-transform: uppercase;
-                    }
-                }
-            }
-        }
-        .wr-about-slider {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            position: absolute;
-            top: -10%;
-            right: 0%;
-            .about-slider {
-                width: 740px;
-                height: 461px;
-                flex: 1 0 50%;
-                position: relative;
-                .slick-next:before {
-                    position: absolute;
-                    top: 1200%;
-                    right: 3500%;
-                    color: #999999;
-                }
-                .slick-prev:before {
-                    position: absolute;
-                    top: 1200%;
-                    right: -120%;
-                    color: #999999;
-                }
-            }
-            p {
-                font-family: 'Segoe';
-                font-size: 14px;
-                font-weight: 600;
-                letter-spacing: 2.8px;
-                text-align: left;
-                text-transform: uppercase;
-            }
-        }
-    }
-}
+                                    @import url(./settings.scss);
+                                    body {
+                                        overflow-x: hidden;
+                                    }
+                                    
+                                    %menu-list-slash {
+                                        position: absolute;
+                                        content: '';
+                                        width: 35px;
+                                        height: 1px;
+                                        top: 29px;
+                                        left: 215px;
+                                    }
+                                    /*set wr-header*/
+                                    
+                                    header {
+                                        .container {
+                                            height: 160px;
+                                            display: flex;
+                                            justify-content: center;
+                                            align-items: center;
+                                            position: relative;
+                                            margin: 0 auto;
+                                            .header-logo {
+                                                width: 172px;
+                                                height: 69px;
+                                            }
+                                            .burger {
+                                                width: 125px;
+                                                height: 55px;
+                                                position: absolute;
+                                                right: 25px;
+                                                cursor: pointer;
+                                                .burger-text {
+                                                    font-family: 'MBold';
+                                                    text-transform: uppercase;
+                                                    font-size: 13px;
+                                                    letter-spacing: 2.6px;
+                                                    color: #c4c4c4;
+                                                }
+                                                .burger-img {
+                                                    display: inline-block;
+                                                    transition: all .4s;
+                                                    box-sizing: border-box;
+                                                    position: relative;
+                                                    width: 40px;
+                                                    height: 23px;
+                                                    span {
+                                                        display: inline-block;
+                                                        transition: all .4s;
+                                                        box-sizing: border-box;
+                                                        position: absolute;
+                                                        width: 100%;
+                                                        height: 3px;
+                                                        background-color: #000;
+                                                    }
+                                                    span:nth-of-type(1) {
+                                                        top: 11px;
+                                                    }
+                                                    span:nth-of-type(2) {
+                                                        top: 17px;
+                                                    }
+                                                    span:nth-of-type(3) {
+                                                        top: 25px;
+                                                    }
+                                                }
+                                                .first {
+                                                    transform: translate(4px, -8px) rotate(45deg);
+                                                    transform-origin: left top;
+                                                }
+                                                .middle {
+                                                    transform: scale(0);
+                                                }
+                                                .last {
+                                                    transform: translate(-8px, -24px) rotate(-45deg);
+                                                    transform-origin: right bottom;
+                                                }
+                                            }
+                                        }
+                                    }
+                                    
+                                    nav {
+                                        .container {
+                                            width: 100%;
+                                            height: 750px;
+                                            background-color: #e9edef;
+                                            position: absolute;
+                                            visibility: hidden;
+                                            z-index: 10;
+                                            .menu-list {
+                                                display: flex;
+                                                list-style: none;
+                                                flex-direction: column;
+                                                height: 100%;
+                                                justify-content: center;
+                                                margin-left: 20%;
+                                                position: relative;
+                                                >:nth-child(2):after {
+                                                    @extend %menu-list-slash;
+                                                }
+                                                >:nth-child(3):after {
+                                                    @extend %menu-list-slash;
+                                                }
+                                                li {
+                                                    padding: 15px 0px 15px 0;
+                                                    position: relative;
+                                                    display: flex;
+                                                    align-items: center;
+                                                    a {
+                                                        text-decoration: none;
+                                                        color: #000000;
+                                                        font-family: 'MBold';
+                                                        font-size: 30px;
+                                                        text-transform: uppercase;
+                                                        letter-spacing: 3px;
+                                                    }
+                                                    a:hover {
+                                                        color: #e06f0a;
+                                                    }
+                                                    .menu-list-about {
+                                                        list-style: none;
+                                                        display: flex;
+                                                        justify-content: space-between;
+                                                        li {
+                                                            display: inline-block;
+                                                            padding: 0 20px;
+                                                            a {
+                                                                height: 12px;
+                                                                color: #626262;
+                                                                font-family: 'MReg';
+                                                                font-size: 14px;
+                                                                text-transform: uppercase;
+                                                                letter-spacing: 2.8px;
+                                                            }
+                                                            a:hover {
+                                                                color: #e06f0a;
+                                                                letter-spacing: 2.8px;
+                                                            }
+                                                        }
+                                                        >::after {
+                                                            content: '\002f';
+                                                            position: absolute;
+                                                            right: -5px;
+                                                            color: #626262;
+                                                            font-family: 'MReg';
+                                                            font-size: 14px;
+                                                            font-weight: 700;
+                                                            text-transform: uppercase;
+                                                            letter-spacing: 2.8px;
+                                                        }
+                                                        >:nth-child(3):after {
+                                                            content: '';
+                                                        }
+                                                    }
+                                                    .menu-list-services {
+                                                        list-style: none;
+                                                        display: flex;
+                                                        justify-content: space-between;
+                                                        margin-left: 115px;
+                                                        li {
+                                                            padding: 0 20px;
+                                                            a {
+                                                                display: block;
+                                                                height: 12px;
+                                                                color: #626262;
+                                                                font-family: 'MReg';
+                                                                font-size: 14px;
+                                                                font-weight: semibold;
+                                                                text-transform: uppercase;
+                                                                letter-spacing: 2.8px;
+                                                            }
+                                                            a:hover {
+                                                                color: #e06f0a;
+                                                                letter-spacing: 2.8px;
+                                                            }
+                                                        }
+                                                        >::after {
+                                                            content: '\002f';
+                                                            position: absolute;
+                                                            right: -5px;
+                                                            color: #626262;
+                                                            font-family: 'MReg';
+                                                            font-size: 14px;
+                                                            font-weight: 700;
+                                                            text-transform: uppercase;
+                                                            letter-spacing: 2.8px;
+                                                        }
+                                                        >:nth-child(4):after {
+                                                            content: '';
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                    /*set wr-slides*/
+                                    
+                                    .wr-slides {
+                                        .container {
+                                            max-width: 1720px;
+                                            height: 1040px;
+                                            position: relative;
+                                            display: flex;
+                                            flex-direction: column;
+                                            align-items: center;
+                                            justify-content: center;
+                                            padding: 0px 60px;
+                                            box-sizing: border-box;
+                                            margin: 0 auto;
+                                            .slides-slider {
+                                                width: 100%;
+                                                height: 100%;
+                                                display: flex;
+                                                justify-content: center;
+                                                .slick-next,
+                                                .slick-prev {
+                                                    height: 59px;
+                                                    width: 59px;
+                                                    background: #7f7f7f;
+                                                    z-index: 2;
+                                                }
+                                            }
+                                            .scroll {
+                                                width: 134px;
+                                                height: 190px;
+                                                padding: 52px 794px 122px 797px;
+                                                position: relative;
+                                                a {
+                                                    text-decoration: none;
+                                                    text-transform: capitalize;
+                                                    &::after {
+                                                        content: '\2193';
+                                                        position: absolute;
+                                                        width: 12px;
+                                                        height: 24px;
+                                                        top: 50px;
+                                                        right: 805px;
+                                                        color: #a5a5a5;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                        .slider-text {
+                                            display: flex;
+                                            flex-direction: column;
+                                            position: absolute;
+                                            top: 200px;
+                                            right: 810px;
+                                            p::before {
+                                                content: '';
+                                                position: absolute;
+                                                width: 40px;
+                                                height: 4px;
+                                                top: -10px;
+                                                right: 390px;
+                                                background-color: #000;
+                                            }
+                                            & p:nth-child(1),
+                                            & p:nth-child(3) {
+                                                font-family: 'Segoe';
+                                                font-size: 60px;
+                                                font-weight: 300;
+                                                text-align: left;
+                                                color: #626262;
+                                                margin-bottom: 5px;
+                                                margin-top: 0;
+                                            }
+                                            & p:nth-child(2) {
+                                                font-family: 'SegoeB';
+                                                font-size: 100px;
+                                                text-align: left;
+                                                text-transform: uppercase;
+                                                color: #000001;
+                                                margin-bottom: 0;
+                                                margin-top: 0;
+                                            }
+                                            .btn {
+                                                width: 220px;
+                                                height: 60px;
+                                                display: flex;
+                                                justify-content: center;
+                                                align-items: center;
+                                                border-radius: 2px;
+                                                border: solid 2px #000000;
+                                                cursor: pointer;
+                                                margin-top: 55px;
+                                                a {
+                                                    font-family: 'MBold';
+                                                    font-size: 13px;
+                                                    font-weight: bold;
+                                                    font-stretch: normal;
+                                                    font-style: normal;
+                                                    line-height: normal;
+                                                    letter-spacing: 2.6px;
+                                                    text-align: center;
+                                                    color: #e06f0a;
+                                                    text-decoration: none;
+                                                    text-transform: uppercase;
+                                                }
+                                            }
+                                        }
+                                    }
+                                    /*set wr-about*/
+                                    
+                                    .wr-about {
+                                        background-color: #e9edef;
+                                        .container {
+                                            height: 760px;
+                                            display: flex;
+                                            align-items: center;
+                                            justify-content: center;
+                                            .wr-about-bg {
+                                                width: 1240px;
+                                                height: 530px;
+                                                box-shadow: 0px 10px 100px 0 rgba(49, 49, 49, 0.2);
+                                                background-color: #ffffff;
+                                                display: flex;
+                                                position: relative;
+                                                .about-text {
+                                                    max-width: 595px;
+                                                    flex: 1 0 50%;
+                                                    display: flex;
+                                                    flex-direction: column;
+                                                    position: absolute;
+                                                    top: -18%;
+                                                    right: 57%;
+                                                    padding: 0px 75px 60px 55px;
+                                                    h3 {
+                                                        width: 12px;
+                                                        height: 84px;
+                                                        transform: rotate(180deg);
+                                                        writing-mode: tb-rl;
+                                                        position: relative;
+                                                        left: -85px;
+                                                        top: 483px;
+                                                        font-family: 'MReg';
+                                                        font-weight: bold;
+                                                        text-align: left;
+                                                        color: #000000;
+                                                        text-transform: uppercase;
+                                                    }
+                                                    h2 {
+                                                        width: 401px;
+                                                        height: 23px;
+                                                        font-family: 'MReg';
+                                                        font-weight: bold;
+                                                        font-size: 30px;
+                                                        text-align: left;
+                                                        color: #000000;
+                                                        text-transform: uppercase;
+                                                        position: relative;
+                                                        margin-bottom: 106px;
+                                                        &::after {
+                                                            display: block;
+                                                            position: relative;
+                                                            content: '';
+                                                            background-color: #000;
+                                                            width: 40px;
+                                                            height: 4px;
+                                                            margin: 38px 0px 64px;
+                                                        }
+                                                    }
+                                                    &:first-of-type p {
+                                                        margin-bottom: 50px;
+                                                    }
+                                                    &:last-of-type p {
+                                                        margin-bottom: 90px;
+                                                    }
+                                                    .about-more {
+                                                        width: 140px;
+                                                        height: 40px;
+                                                        a {
+                                                            text-decoration: none;
+                                                            font-family: 'MBold';
+                                                            font-size: 13px;
+                                                            letter-spacing: 2.6px;
+                                                            text-align: left;
+                                                            color: #e06f0a;
+                                                            text-transform: uppercase;
+                                                            position: relative;
+                                                            &::after {
+                                                                position: absolute;
+                                                                content: '';
+                                                                background-color: #000;
+                                                                width: 4px;
+                                                                height: 20px;
+                                                                left: -55px;
+                                                                top: 115px;
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                            .wr-about-slider {
+                                                display: flex;
+                                                flex-direction: column;
+                                                justify-content: center;
+                                                align-items: center;
+                                                position: absolute;
+                                                top: -10%;
+                                                right: 0%;
+                                                .about-slider {
+                                                    max-width: 740px;
+                                                    height: 461px;
+                                                    flex: 1 1 50%;
+                                                    position: relative;
+                                                    .slick-prev:before {
+                                                        position: absolute;
+                                                        top: 265px;
+                                                        right: -23px;
+                                                        color: #999999;
+                                                    }
+                                                    .slick-next:before {
+                                                        position: absolute;
+                                                        top: 265px;
+                                                        right: 685px;
+                                                        color: #999999;
+                                                    }
+                                                }
+                                                p {
+                                                    font-family: 'Segoe';
+                                                    font-size: 14px;
+                                                    font-weight: 600;
+                                                    letter-spacing: 2.8px;
+                                                    text-align: left;
+                                                    text-transform: uppercase;
+                                                    padding: 28px;
+                                                    &::after {
+                                                        position: absolute;
+                                                        content: '';
+                                                        background-color: #000;
+                                                        width: 4px;
+                                                        height: 20px;
+                                                        right: 0px;
+                                                        bottom: -4px;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                    /*set wr-services*/
+                                    
+                                    .wr-services {
+                                        .container {
+                                            max-width: 1545px;
+                                            height: 1420px;
+                                            padding: 120px 50px 145px 125px;
+                                            display: flex;
+                                            flex-direction: column;
+                                            position: relative;
+                                            margin: 0 auto;
+                                            h3 {
+                                                width: 12px;
+                                                height: 140px;
+                                                transform: rotate(180deg);
+                                                writing-mode: tb-rl;
+                                                font-family: 'MReg';
+                                                font-weight: bold;
+                                                text-align: left;
+                                                color: #000000;
+                                                text-transform: uppercase;
+                                                position: absolute;
+                                                top: 50%;
+                                                left: 69px;
+                                            }
+                                            h2 {
+                                                position: relative;
+                                                font-size: 30px;
+                                                font-family: "MReg";
+                                                color: #000;
+                                                font-weight: 900;
+                                                text-transform: uppercase;
+                                                line-height: 1.2;
+                                                text-align: left;
+                                                padding-bottom: 40px;
+                                            }
+                                            h2::before {
+                                                position: absolute;
+                                                bottom: 0;
+                                                background-color: #000;
+                                                content: '';
+                                                width: 40px;
+                                                height: 2px;
+                                                border: 1px solid black;
+                                            }
+                                            .services-boxes {
+                                                display: flex;
+                                                flex-wrap: wrap;
+                                                justify-content: space-around;
+                                                .box {
+                                                    width: 400px;
+                                                    height: 480px;
+                                                    margin: 60px;
+                                                    display: flex;
+                                                    flex-direction: column;
+                                                    h4 {
+                                                        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                                                        font-size: 14px;
+                                                        font-weight: 600;
+                                                        letter-spacing: 2.8px;
+                                                        color: #000000;
+                                                        text-transform: uppercase;
+                                                        text-align: right;
+                                                    }
+                                                    a {
+                                                        display: none;
+                                                    }
+                                                    &:hover a {
+                                                        display: flex;
+                                                        justify-content: center;
+                                                        align-items: center;
+                                                        width: 360px;
+                                                        height: 440px;
+                                                        border: 1px solid #fff;
+                                                        margin-left: 20px;
+                                                        font-family: 'MReg';
+                                                        font-size: 16px;
+                                                        letter-spacing: 3.2px;
+                                                        color: #ffffff;
+                                                        text-transform: uppercase;
+                                                    }
+                                                    &:hover :nth-of-type(3) a {
+                                                        margin-top: 19px;
+                                                    }
+                                                }
+                                                .box:nth-child(2n) {
+                                                    h4 {
+                                                        text-align: left;
+                                                    }
+                                                }
+                                                .box1 {
+                                                    z-index: 1000;
+                                                    background: url('../media/services-web.png');
+                                                    &:hover {
+                                                        background: url('../media/services-web-hover.png');
+                                                    }
+                                                }
+                                                .box2 {
+                                                    z-index: 1000;
+                                                    background: url('../media/services-app.png');
+                                                    &:hover {
+                                                        background: url('../media/services-app-hover.png');
+                                                    }
+                                                }
+                                                .box3 {
+                                                    background: url('../media/services-commerce.png');
+                                                    margin: -165px 0 0 400px;
+                                                    &:hover {
+                                                        z-index: 2000;
+                                                        background: url('../media/services-commerce-hover.png');
+                                                    }
+                                                }
+                                                .box4 {
+                                                    margin: -165px 0 0 130px;
+                                                    background: url('../media/services-seo.png');
+                                                    &:hover {
+                                                        z-index: 2000;
+                                                        background: url('../media/services-seo-hover.png');
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
