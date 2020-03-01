@@ -18,3 +18,11 @@
   $('.about-slider').slick({
       arrows: true,
   });
+
+  $('.testimonials-slider').slick({
+      dots: true,
+      slidesToShow: 1,
+      adaptiveHeight: true,
+      autoplay: true,
+      autoplaySpeed: 2000
+  });
