@@ -7,7 +7,6 @@
                                                                                             max-width: 1720px;
                                                                                             width: 100%;
                                                                                             box-sizing: border-box;
-                                                                                            padding: 0 20px;
                                                                                             margin: 0 auto;
                                                                                         }
                                                                                         
@@ -929,60 +928,118 @@
                                                                                         /*set wr-content1*/
                                                                                         
                                                                                         .wr-content1 {
-                                                                                            height: 955px;
-                                                                                            background: url(../media/content-1-bg.png);
-                                                                                            background-position: left 0px;
-                                                                                            background-size: 57%;
-                                                                                            background-repeat: no-repeat;
+                                                                                            height: 750px;
                                                                                             .container {
                                                                                                 width: 100%;
                                                                                                 height: 100%;
                                                                                                 display: flex;
-                                                                                                flex-wrap: wrap;
-                                                                                                position: relative;
+                                                                                                img {
+                                                                                                    display: block;
+                                                                                                    max-width: 50%;
+                                                                                                }
                                                                                                 .content1-text {
                                                                                                     flex: 0 0 50%;
-                                                                                                    max-width: 30%;
-                                                                                                    position: absolute;
-                                                                                                    left: 65%;
-                                                                                                    top: 20%;
-                                                                                                    h2 {
-                                                                                                        position: relative;
-                                                                                                        font-size: 30px;
-                                                                                                        font-family: "MReg";
-                                                                                                        color: #000;
-                                                                                                        font-weight: 900;
-                                                                                                        text-transform: uppercase;
-                                                                                                        line-height: 1.2;
-                                                                                                        text-align: left;
-                                                                                                        padding-bottom: 40px;
-                                                                                                    }
-                                                                                                    h2::before {
-                                                                                                        position: absolute;
-                                                                                                        bottom: 0;
-                                                                                                        background-color: #000;
-                                                                                                        content: '';
-                                                                                                        width: 40px;
-                                                                                                        height: 2px;
-                                                                                                        border: 1px solid black;
-                                                                                                    }
-                                                                                                    p {
-                                                                                                        &:first-of-type {
-                                                                                                            font-family: 'SegoeL';
-                                                                                                            font-size: 24px;
-                                                                                                            line-height: 1.64;
-                                                                                                            color: #000000;
-                                                                                                            padding-top: 100px;
+                                                                                                    max-width: 50%;
+                                                                                                    height: 100%;
+                                                                                                    .wr-text {
+                                                                                                        padding: 50px 125px;
+                                                                                                        h2 {
+                                                                                                            position: relative;
+                                                                                                            font-size: 30px;
+                                                                                                            font-family: "MReg";
+                                                                                                            color: #000;
+                                                                                                            font-weight: 900;
+                                                                                                            text-transform: uppercase;
+                                                                                                            line-height: 1.2;
+                                                                                                            text-align: left;
+                                                                                                            padding-bottom: 40px;
                                                                                                         }
-                                                                                                        &:last-of-type {
-                                                                                                            font-family: 'SegoeL';
-                                                                                                            font-size: 18px;
-                                                                                                            font-style: italic;
-                                                                                                            line-height: 1.33;
-                                                                                                            color: #626262;
-                                                                                                            padding-top: 50px;
+                                                                                                        h2::before {
+                                                                                                            position: absolute;
+                                                                                                            bottom: 0;
+                                                                                                            background-color: #000;
+                                                                                                            content: '';
+                                                                                                            width: 40px;
+                                                                                                            height: 2px;
+                                                                                                            border: 1px solid black;
+                                                                                                        }
+                                                                                                        p {
+                                                                                                            &:first-of-type {
+                                                                                                                font-family: 'SegoeL';
+                                                                                                                font-size: 24px;
+                                                                                                                line-height: 1.64;
+                                                                                                                color: #000000;
+                                                                                                                padding-top: 100px;
+                                                                                                            }
+                                                                                                            &:last-of-type {
+                                                                                                                font-family: 'SegoeL';
+                                                                                                                font-size: 18px;
+                                                                                                                font-style: italic;
+                                                                                                                line-height: 1.33;
+                                                                                                                color: #626262;
+                                                                                                                padding-top: 50px;
+                                                                                                            }
                                                                                                         }
                                                                                                     }
+                                                                                                }
+                                                                                            }
+                                                                                        }
+                                                                                        /*set wr-content2*/
+                                                                                        
+                                                                                        .wr-content2 {
+                                                                                            height: 750px;
+                                                                                            .container {
+                                                                                                width: 100%;
+                                                                                                height: 100%;
+                                                                                                display: flex;
+                                                                                                .content2-text {
+                                                                                                    flex: 0 0 50%;
+                                                                                                    max-width: 50%;
+                                                                                                    height: 100%;
+                                                                                                    .wr-text {
+                                                                                                        padding: 50px 125px;
+                                                                                                        h2 {
+                                                                                                            position: relative;
+                                                                                                            font-size: 30px;
+                                                                                                            font-family: "MReg";
+                                                                                                            color: #000;
+                                                                                                            font-weight: 900;
+                                                                                                            text-transform: uppercase;
+                                                                                                            line-height: 1.2;
+                                                                                                            text-align: left;
+                                                                                                            padding-bottom: 40px;
+                                                                                                        }
+                                                                                                        h2::before {
+                                                                                                            position: absolute;
+                                                                                                            bottom: 0;
+                                                                                                            background-color: #000;
+                                                                                                            content: '';
+                                                                                                            width: 40px;
+                                                                                                            height: 2px;
+                                                                                                            border: 1px solid black;
+                                                                                                        }
+                                                                                                        p {
+                                                                                                            &:first-of-type {
+                                                                                                                font-family: 'SegoeL';
+                                                                                                                font-size: 24px;
+                                                                                                                line-height: 1.64;
+                                                                                                                color: #000000;
+                                                                                                                padding-top: 100px;
+                                                                                                            }
+                                                                                                            &:last-of-type {
+                                                                                                                font-family: 'SegoeL';
+                                                                                                                font-size: 18px;
+                                                                                                                font-style: italic;
+                                                                                                                line-height: 1.33;
+                                                                                                                color: #626262;
+                                                                                                                padding-top: 50px;
+                                                                                                            }
+                                                                                                        }
+                                                                                                    }
+                                                                                                }
+                                                                                                img {
+                                                                                                    display: block;
+                                                                                                    max-width: 50%;
                                                                                                 }
                                                                                             }
                                                                                         }
