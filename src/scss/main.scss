@@ -1143,7 +1143,7 @@
                                                                         }
                                                                         .iphone {
                                                                             width: 285px;
-                                                                            height: 365px;
+                                                                            height: 290px;
                                                                             background: url(../media/app-iphone.png);
                                                                             background-repeat: no-repeat;
                                                                             position: absolute;
@@ -1153,12 +1153,85 @@
                                                                         }
                                                                         .ipad {
                                                                             width: 570px;
-                                                                            height: 435px;
+                                                                            height: 377px;
                                                                             background: url(../media/app-ipad.png);
                                                                             background-repeat: no-repeat;
                                                                             position: absolute;
                                                                             top: 35%;
                                                                             left: 60%;
                                                                             z-index: 2;
+                                                                        }
+                                                                    }
+                                                                    /*set wr-events*/
+                                                                    
+                                                                    .wr-events {
+                                                                        background: url(../media/events-bg.png);
+                                                                        height: 850px;
+                                                                        display: flex;
+                                                                        justify-content: center;
+                                                                        align-items: center;
+                                                                        .container {
+                                                                            background: #fff;
+                                                                            max-width: 1040px;
+                                                                            height: 540px;
+                                                                            display: flex;
+                                                                            .events-content {
+                                                                                background-color: #fff;
+                                                                                display: flex;
+                                                                                flex-direction: column;
+                                                                                justify-content: center;
+                                                                                align-items: center;
+                                                                                position: relative;
+                                                                                padding: 90px 120px 100px 120px;
+                                                                                h2 {
+                                                                                    position: relative;
+                                                                                    font-size: 30px;
+                                                                                    font-family: "MReg";
+                                                                                    color: #000;
+                                                                                    font-weight: 900;
+                                                                                    text-transform: uppercase;
+                                                                                    line-height: 1.2;
+                                                                                    text-align: left;
+                                                                                    padding-bottom: 95px;
+                                                                                }
+                                                                                h2::before {
+                                                                                    position: absolute;
+                                                                                    bottom: 60px;
+                                                                                    left: 42%;
+                                                                                    background-color: #000;
+                                                                                    content: '';
+                                                                                    width: 40px;
+                                                                                    height: 2px;
+                                                                                    border: 1px solid black;
+                                                                                }
+                                                                                p {
+                                                                                    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                                                                                    font-size: 20px;
+                                                                                    font-weight: 300;
+                                                                                    line-height: 1.5;
+                                                                                    color: #000000;
+                                                                                    padding-bottom: 50px;
+                                                                                    text-align: center;
+                                                                                }
+                                                                                button {
+                                                                                    display: flex;
+                                                                                    justify-content: center;
+                                                                                    align-items: center;
+                                                                                    font-family: 'MReg';
+                                                                                    font-size: 13px;
+                                                                                    font-weight: bold;
+                                                                                    letter-spacing: 2.6px;
+                                                                                    text-transform: uppercase;
+                                                                                    color: #e06f0a;
+                                                                                    width: 220px;
+                                                                                    height: 60px;
+                                                                                    border: 2px solid #000;
+                                                                                    border-radius: 2px;
+                                                                                    background-color: #fff;
+                                                                                    &:hover {
+                                                                                        box-shadow: 0 0 10px #103550;
+                                                                                    }
+                                                                                }
+                                                                            }
                                                                         }
                                                                     }
