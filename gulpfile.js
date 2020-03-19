@@ -75,7 +75,7 @@ gulp.task('compress', () => {
 gulp.task('watch', () => {
     browserSync.init({
         server: {
-            baseDir: "src/"
+            baseDir: "./src"
         }
     });
 
@@ -83,7 +83,7 @@ gulp.task('watch', () => {
     gulp.watch('./src/css/**/*.css', gulp.series('styles'))
     gulp.watch('./src/js/**/*.js', gulp.series('scripts'))
     gulp.watch('./src/media/**', gulp.series('compress'))
-    gulp.watch('./*.html').on('change', browserSync.reload);
+    gulp.watch('./src/*.html').on('change', browserSync.reload);
 });
 
 gulp.task('default', gulp.series('del', gulp.parallel('html', 'styles', 'scripts', 'compress'), 'watch'));
