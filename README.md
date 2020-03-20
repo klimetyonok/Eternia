@@ -2,7 +2,7 @@
   ETERNIA
 </h1>
 
-Ссылка на проект (a href="https://klimetyonok.github.io/project/build/index.html")
+Ссылка на проект (https://klimetyonok.github.io/project/build/index.html)
 
 <p align="center">
 <h4> Gulp в Eternia: </h4>
