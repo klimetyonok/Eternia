@@ -11,6 +11,14 @@
       $('.burger span:nth-child(3)').toggleClass('last');
   });
 
+  $('#menu-list').on('click', 'a', function(event) {
+      event.preventDefault();
+      let id = $(this).attr('href'),
+          top = $(id).offset().top - 0 + 'px';
+      $('body,html').animate({ scrollTop: top }, 1200);
+  });
+
+
   $('.slides-slider').slick({
       arrows: true,
   });
