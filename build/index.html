@@ -11,10 +11,10 @@
 
 <body>
     <!--section top header-->
-    <section class="wr-header">
-        <header>
+    <section class="wr-header" id="home">
+        <header class="header">
             <div class="container">
-                <a class="header-logo" href="#"><img src="./media/header-logo.png" alt="esternia logo"></a>
+                <a class="header-logo" href="#home"><img src="./media/header-logo.png" alt="esternia logo"></a>
                 <div class="burger">
                     <span class="burger-text">menu</span>
                     <div class="burger-img">
@@ -27,27 +27,27 @@
         </header>
         <nav>
             <div class="container">
-                <div class="menu-list">
+                <div class="menu-list" id="menu-list">
                     <ul>
-                        <li><a href="#">home</a></li>
-                        <li><a href="#">about us</a>
+                        <li><a href="#home">home</a></li>
+                        <li><a href="#about-us">about us</a>
                             <ul class="menu-list-about">
-                                <li><a href="#">our team</a></li>
-                                <li><a href="#">company</a></li>
-                                <li><a href="#">job openings</a></li>
+                                <li><a href="#our-team">our team</a></li>
+                                <li><a href="#company">company</a></li>
+                                <li><a href="#job-openings">job openings</a></li>
                             </ul>
                         </li>
-                        <li><a href="#">services</a>
+                        <li><a href="#services">services</a>
                             <ul class="menu-list-services">
-                                <li><a href="#">web & interactive design</a></li>
-                                <li><a href="#">app development</a></li>
-                                <li><a href="#">ecommerce</a></li>
-                                <li><a href="#">seo & marketing</a></li>
+                                <li><a href="#web">web & interactive design</a></li>
+                                <li><a href="#app">app development</a></li>
+                                <li><a href="#ecommerce">ecommerce</a></li>
+                                <li><a href="#seo">seo & marketing</a></li>
                             </ul>
                         </li>
-                        <li><a href="#">blog</a></li>
-                        <li><a href="#">products</a></li>
-                        <li><a href="#">contact us</a></li>
+                        <li><a href="#blog">blog</a></li>
+                        <li><a href="#products">products</a></li>
+                        <li><a href="#contact">contact us</a></li>
                     </ul>
                 </div>
             </div>
@@ -70,10 +70,10 @@
         </div>
     </section>
     <!--section about-->
-    <section class="wr-about">
+    <section class="wr-about" id="about-us">
         <div class="container">
             <div class="wr-about-bg">
-                <div class="about-text">
+                <div class="about-text" id="company">
                     <h3>about us</h3>
                     <h2>the creative side of us</h2>
                     <p>Sed libero enim, rhoncus vel malesuada ac, euismod a velit. Morbi pellentesque eleifend lectus quis congue. Aenean quis tellus tortor, quis fermentum diam. Pellentesque molestie, dolor et tempor molestie, dui ipsum egestas elit.</p>
@@ -96,19 +96,19 @@
             <h3>what we offer</h3>
             <h2>our services</h2>
             <div class="services-boxes">
-                <div class="box1 box">
+                <div class="box1 box" id="web">
                     <h4>web & interactive design</h4>
                     <a href="#">+ learn more</a>
                 </div>
-                <div class="box2 box">
+                <div class="box2 box" id="app">
                     <h4>app development</h4>
                     <a href="#">+ learn more</a>
                 </div>
-                <div class="box3 box">
+                <div class="box3 box" id="ecommerce">
                     <a href="#">+ learn more</a>
                     <h4>ecommerce</h4>
                 </div>
-                <div class="box4 box">
+                <div class="box4 box" id="seo">
                     <a href="#">+ learn more</a>
                     <h4>seo & marketing</h4>
                 </div>
@@ -116,7 +116,7 @@
         </div>
     </section>
     <!--section portfolio-->
-    <section class="wr-portfolio">
+    <section class="wr-portfolio" id="products">
         <div class="container">
             <h3>see our works</h3>
             <h2>our portfolio</h2>
@@ -198,7 +198,7 @@
         </div>
     </section>
     <!--section content1-->
-    <section class="wr-content1">
+    <section class="wr-content1" id="blog">
         <div class="container">
             <img src="../build/media/content-1-bg.png" alt="table">
             <div class="content1-text">
@@ -250,9 +250,9 @@
         </div>
     </section>
     <!--section team-->
-    <section class="wr-team">
+    <section class="wr-team" id="our-team">
         <div class="container">
-            <div class="team-content">
+            <div class="team-content" id="job-openings">
                 <h3>job openings</h3>
                 <h2>meet our team</h2>
                 <div class="team-wrapper">
@@ -309,7 +309,7 @@
     <section class="wr-footer">
         <footer>
             <div class="container">
-                <div class="enquiries">
+                <div class="enquiries" id="contact">
                     <h4>enquiries</h4>
                     <span>+ 987-654-3210</span>
                     <span>info@eternia.com</span>
@@ -334,13 +334,13 @@
                 </div>
             </div>
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Projects</a></li>
-                <li><a href="#">Portfolio</a></li>
-                <li><a href="#">Blog</a></li>
-                <li><a href="#">Contact Us</a></li>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about-us">About Us</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#products">Projects</a></li>
+                <li><a href="#products">Portfolio</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#contact">Contact Us</a></li>
             </ul>
             <address>&#169;Copyright 2020. Eternia Inc. It could be worse.</address>
         </footer>

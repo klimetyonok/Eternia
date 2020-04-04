@@ -75,9 +75,11 @@ gulp.task('compress', () => {
 gulp.task('watch', () => {
     browserSync.init({
         server: {
-            baseDir: "./src"
-        }
+            baseDir: "src/"
+        },
+        notify: false
     });
+
 
     gulp.watch('./src/scss/**/*.scss', gulp.series('styles'))
     gulp.watch('./src/css/**/*.css', gulp.series('styles'))
