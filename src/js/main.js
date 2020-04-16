@@ -1,7 +1,7 @@
   $('.burger, .scrollto').on('click', function() {
       $(this).toggleClass('active');
       $('.burger-text').text() == "menu" ? $('.burger-text').text("close") : $('.burger-text').text("menu");
-      $('nav .container').css('visibility') == 'visible' ? $('nav .container').css('visibility', 'hidden') : $('nav .container').css('visibility', 'visible');
+      $('.scrollto').css('visibility') == 'visible' ? $('.scrollto').css('visibility', 'hidden') : $('.scrollto').css('visibility', 'visible');
       return false;
   });
 
@@ -22,11 +22,11 @@
   $(window).scroll(function() {
       if ($(window).scrollTop() >= 300) {
           $('header').addClass('fixed-header');
-          $('nav').addClass('fixed-nav');
+          $('.scrollto').addClass('fixed-nav');
 
       } else {
           $('header').removeClass('fixed-header');
-          $('nav').addClass('fixed-nav');
+          $('.scrollto').removeClass('fixed-nav');
 
       }
   });
